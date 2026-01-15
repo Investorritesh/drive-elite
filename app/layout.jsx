@@ -1,4 +1,5 @@
 import './globals.css';
+import { AuthProvider } from './context/AuthContext';
 
 export const metadata = {
   title: 'DriveElite | Premium Car Rentals',
@@ -8,8 +9,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-gray-100">
-        {children}
+      <body className="bg-gray-900">
+        <AuthProvider>
+          {children}
+        </AuthProvider>
       </body>
     </html>
   );
